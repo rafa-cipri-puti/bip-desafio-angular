@@ -1,0 +1,8 @@
+{
+  "projects": [
+    { "id": 1, "nome": "Projeto Alpha", "descricao": "Primeiro projeto" }
+  ],
+  "tasks": [
+    { "id": 1, "titulo": "Tarefa inicial", "descricao": "Descrição da tarefa", "status": "pendente", "prioridade": "alta", "projetoId": 1 }
+  ]
+}
