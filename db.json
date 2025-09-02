@@ -1,8 +1,69 @@
 {
   "projects": [
-    { "id": 1, "nome": "Projeto Alpha", "descricao": "Primeiro projeto" }
+    {
+      "id": "1",
+      "nome": "Projeto Angular",
+      "descricao": "App de gerenciamento de tarefas"
+    },
+    {
+      "id": "2",
+      "nome": "Projeto Node",
+      "descricao": "API REST para integração"
+    },
+    {
+      "id": "3",
+      "nome": "Projeto Mobile",
+      "descricao": "Aplicativo mobile para clientes"
+    }
   ],
   "tasks": [
-    { "id": 1, "titulo": "Tarefa inicial", "descricao": "Descrição da tarefa", "status": "pendente", "prioridade": "alta", "projetoId": 1 }
+    {
+      "id": "1",
+      "titulo": "Criar componente de lista",
+      "descricao": "Listar todos os projetos",
+      "status": "pendente",
+      "prioridade": "alta",
+      "projetoId": "1"
+    },
+    {
+      "id": "2",
+      "titulo": "Implementar serviço",
+      "descricao": "Serviço para consumir API",
+      "status": "em andamento",
+      "prioridade": "media",
+      "projetoId": "1"
+    },
+    {
+      "id": "3",
+      "titulo": "Testar integração",
+      "descricao": "Testes unitários do serviço",
+      "status": "concluída",
+      "prioridade": "baixa",
+      "projetoId": "1"
+    },
+    {
+      "id": "4",
+      "titulo": "Criar endpoints",
+      "descricao": "Endpoints REST para tarefas",
+      "status": "pendente",
+      "prioridade": "alta",
+      "projetoId": "2"
+    },
+    {
+      "id": "5",
+      "titulo": "Documentar API",
+      "descricao": "Documentação Swagger",
+      "status": "em andamento",
+      "prioridade": "media",
+      "projetoId": "2"
+    },
+    {
+      "id": "6",
+      "titulo": "Publicar versão",
+      "descricao": "Deploy em produção",
+      "status": "pendente",
+      "prioridade": "baixa",
+      "projetoId": "3"
+    }
   ]
 }

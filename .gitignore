@@ -1,0 +1,17 @@
+# dependências
+node_modules/
+package-lock.json
+
+# builds
+dist/
+.angular/
+.angular/cache/
+
+# IDE / SO
+.vscode/
+.DS_Store
+
+# logs / temp
+*.log
+*.tmp
+.cache/
