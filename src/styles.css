@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cdk-overlay-pane {
+  z-index: 10000;
+}
+
+.mat-mdc-select-panel {
+  z-index: 10001 !important;
+}
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* === Corrige área de erro do Angular Material (MDC) === */
+.mat-mdc-form-field,
+.mat-mdc-form-field * {
+  overflow: visible !important; /* evita corte por overflow:hidden */
+}
+
+/* garante que a área de subscrição (onde fica mat-error) tenha espaço */
+.mat-mdc-form-field-subscript-wrapper,
+.mat-mdc-form-field .mat-mdc-form-field-subscript-wrapper {
+  height: auto !important;
+  min-height: 20px !important;   /* espaço para a mensagem */
+  margin-top: 4px !important;
+  display: block !important;
+  overflow: visible !important;
+}
+
+/* style visível para mensagens de erro */
+.mat-error {
+  display: block !important;
+  color: #f44336 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+  margin-top: 4px !important;
+  padding: 0 !important;
+}
+
+/* Caso existam regras MDL antigas que escondem a subscript-wrapper */
+.mat-mdc-form-field .mat-mdc-form-field-subscript-wrapper[hidden] { display:block !important; }

@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<mat-card class="mat-elevation-z4 content-card">
+  <mat-card-header class="card-header">
+
+    <mat-card-title class="card-title">
+      <button mat-icon-button color="primary" (click)="voltarParaLista()" aria-label="Voltar para lista"
+        style="margin-right: 12px;">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      INFORMAÇÕES DO PROJETO
+    </mat-card-title>
+    <div style="display: flex; gap: 8px; margin-left: auto;">
+
+      <button mat-raised-button color="primary" (click)="editarProjeto(projeto)">Editar Projeto</button>
+      <button mat-raised-button color="primary" (click)="novaTarefa()">Nova Tarefa</button>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="card-header" style="margin-bottom: 16px; margin-left: 12px;">
+      <span class="title-name">{{ projeto?.nome }} :</span>
+      <span class="title-name" style="margin-left: 6px;">{{ projeto?.descricao }}</span>
+    </div>
+
+    <span class="title-column" style="margin-left: 12px;">Tarefas:</span>
+    <mat-list>
+      <ng-container *ngIf="tarefas.length > 0">
+        <ng-container *ngFor="let tarefa of tarefas; let i = index">
+          <mat-list-item>
+            <div class="projeto-grid">
+              <span class="mat-subtitle1">{{ tarefa.titulo }}</span>
+              <span class="mat-body2">{{ tarefa.descricao }}</span>
+              <div class="projeto-actions">
+                <button mat-icon-button color="warn" (click)="removerTarefa(tarefa.id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="editarTarefa(tarefa)">
+                  <mat-icon>launch</mat-icon>
+                </button>
+              </div>
+            </div>
+          </mat-list-item>
+          <mat-divider *ngIf="i < tarefas.length - 1"></mat-divider>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="tarefas.length === 0">
+        <div class="no-items-message">
+          Nenhuma tarefa encontrada. Crie uma nova!
+        </div>
+      </ng-container>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<app-footer></app-footer>
